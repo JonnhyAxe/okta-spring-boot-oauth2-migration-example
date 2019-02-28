@@ -28,7 +28,7 @@ public class OAuth2DemoResourceServer_1_5 {
     @GetMapping("/api")
     @PreAuthorize("#oauth2.hasScope('openid')")
     String api() {
-        return "made it!";
+        return "Made it to protected api on resource server!";
     }
 
     @Configuration
