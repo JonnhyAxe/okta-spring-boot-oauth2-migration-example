@@ -1,0 +1,6 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: https://{your okta org}.oktapreview.com/oauth2/{authorization server id}/v1/keys

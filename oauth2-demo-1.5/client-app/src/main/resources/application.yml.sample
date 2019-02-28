@@ -9,3 +9,9 @@ security:
       scope: openid profile email
     resource:
       userInfoUri: https://{your okta org}.oktapreview.com/oauth2/{authorization server id}/v1/userinfo
+      server: http://localhost:8081
+logging:
+  level:
+    com:
+      okta:
+        example: DEBUG

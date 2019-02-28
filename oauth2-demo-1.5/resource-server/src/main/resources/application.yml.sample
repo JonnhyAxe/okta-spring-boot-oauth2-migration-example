@@ -3,9 +3,5 @@ security:
     client:
       clientId: {okta client id}
       clientSecret: {okta client secret}
-      accessTokenUri: https://{your okta org}.oktapreview.com/oauth2/{authorization server id}/v1/token
-      userAuthorizationUri: https://{your okta org}.oktapreview.com/oauth2/{authorization server id}/v1/authorize
-      clientAuthenticationScheme: form
-      scope: openid profile email
     resource:
-      userInfoUri: https://{your okta org}.oktapreview.com/oauth2/{authorization server id}/v1/userinfo
+      tokenInfoUri: https://{your okta org}.oktapreview.com/oauth2/{authorization server id}/v1/introspect

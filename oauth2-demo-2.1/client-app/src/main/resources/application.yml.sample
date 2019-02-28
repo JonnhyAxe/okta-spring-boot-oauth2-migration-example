@@ -4,8 +4,10 @@ spring:
       client:
         provider:
           okta:
-            issuer-uri: https://{yourokta org}.oktapreview.com/oauth2/{authorization server id}
+            issuer-uri: https://{your okta org}.oktapreview.com/oauth2/{authorization server id}
         registration:
           okta:
             client-id: {okta client id}
             client-secret: {okta client secret}
+      resource:
+        server: http://localhost:8081
