@@ -3,9 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.okta.example</groupId>
-	<artifactId>okta-oauth2-demo-1.5</artifactId>
+	<artifactId>oauth2-demo-1.5</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>okta-oauth2-demo-1.5</name>
+	<name>oauth2-demo-1.5</name>
 	<description>Demo project for Spring Boot</description>
 	<packaging>pom</packaging>
 

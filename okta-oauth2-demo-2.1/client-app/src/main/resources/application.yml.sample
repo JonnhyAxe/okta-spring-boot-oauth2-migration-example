@@ -3,3 +3,4 @@ okta:
     issuer: https://{your okta org}.oktapreview.com/oauth2/{authorization server id}
     clientId: {okta client id}
     clientSecret: {okta client secret}
+    audience: http://localhost:8081
