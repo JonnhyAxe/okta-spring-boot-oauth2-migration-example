@@ -6,7 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
 import org.springframework.security.oauth2.client.web.OAuth2AuthorizedClientRepository;
 import org.springframework.security.oauth2.client.web.reactive.function.client.ServletOAuth2AuthorizedClientExchangeFilterFunction;
@@ -38,7 +37,7 @@ public class OAuth2DemoApplication_Okta_2_1 {
     }
 
     @GetMapping("/api")
-    String time(@AuthenticationPrincipal OAuth2AuthenticationToken oauthToken) {
+    String api() {
         return this.webClient
             .get()
             .uri(this.resourceServerUrl + "/api")
