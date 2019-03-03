@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.client.DefaultOAuth2ClientContext;
 import org.springframework.security.oauth2.client.OAuth2ClientContext;
 import org.springframework.security.oauth2.client.OAuth2RestTemplate;
@@ -34,13 +33,13 @@ public class OAuth2DemoApplication_1_5 {
     }
 
     @GetMapping("/")
-    String home(@AuthenticationPrincipal OAuth2Authentication authentication) {
+    String home(OAuth2Authentication authentication) {
 
         return "Hello " + authentication.getName();
     }
 
     @GetMapping("/api")
-    String time(@AuthenticationPrincipal OAuth2Authentication authentication) {
+    String time(OAuth2Authentication authentication) {
         return tokenRelayTemplate(authentication).getForObject(resourceServerUrl + "/api", String.class);
     }
 
