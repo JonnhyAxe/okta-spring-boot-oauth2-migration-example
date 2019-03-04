@@ -4,4 +4,4 @@ security:
       clientId: {okta client id}
       clientSecret: {okta client secret}
     resource:
-      tokenInfoUri: https://{your okta org}.oktapreview.com/oauth2/{authorization server id}/v1/introspect
+      tokenInfoUri: https://{your okta org}.okta.com/oauth2/default/v1/introspect

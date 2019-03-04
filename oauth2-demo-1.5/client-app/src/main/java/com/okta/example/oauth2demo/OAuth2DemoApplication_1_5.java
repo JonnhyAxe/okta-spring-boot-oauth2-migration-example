@@ -39,13 +39,14 @@ public class OAuth2DemoApplication_1_5 {
     }
 
     @GetMapping("/api")
-    String time(OAuth2Authentication authentication) {
+    String api(OAuth2Authentication authentication) {
         return tokenRelayTemplate(authentication).getForObject(resourceServerUrl + "/api", String.class);
     }
 
     private OAuth2RestTemplate tokenRelayTemplate(OAuth2Authentication authentication) {
         OAuth2AuthenticationDetails details = (OAuth2AuthenticationDetails) authentication.getDetails();
-        OAuth2ClientContext context = new DefaultOAuth2ClientContext(new DefaultOAuth2AccessToken(details.getTokenValue()));
+        OAuth2ClientContext context =
+            new DefaultOAuth2ClientContext(new DefaultOAuth2AccessToken(details.getTokenValue()));
 
         return new OAuth2RestTemplate(resource, context);
     }
